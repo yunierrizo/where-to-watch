@@ -1,8 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
-}
+    images: {
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "image.tmdb.org**",
+            },
+            {
+                protocol: "https",
+                hostname: "www.google.com**",
+            },
+        ],
+    },
+    experimental: {
+        appDir: true,
+    },
+};
 
 module.exports = nextConfig

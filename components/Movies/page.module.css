@@ -1,0 +1,73 @@
+.moviesGrid {
+    padding: 10%;
+}
+
+.movieCard {
+    display: flex;
+    flex-direction: row;
+    background-color: #2d2d2d;
+    border-radius: 10px;
+    align-items: center;
+    cursor: pointer;
+    animation-duration: .5s;
+    animation-name: cardDown;
+    position: relative;
+}
+
+.movieCard:hover {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    animation-duration: .5s;
+    animation-name: cardUp;
+}
+
+.rating {
+    position: absolute;
+    top: 16px;
+    right: 21px;
+    color: black;
+    border-radius: 0 10px;
+    z-index: 2;
+}
+
+.ratingBar {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: black;
+    border-radius: 100px;
+}
+
+.type {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: gray;
+    color: black;
+    padding: 5px 20px 0 20px;
+    border-radius: 10px 0;
+}
+
+@keyframes cardUp {
+    from {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    to {
+        margin-top: -10px;
+        margin-bottom: 10px;
+    }
+}
+
+@keyframes cardDown {
+    from {
+        margin-top: -10px;
+        margin-bottom: 10px;
+    }
+
+    to {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
